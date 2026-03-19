@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 num_steps = 1000
 runs = 50
 
-# --- 1. AŞAMA: TEK RANDOM WALK (görselleştirme için) ---
+
 x, y = [0], [0]
 
 for _ in range(num_steps):
@@ -27,7 +27,7 @@ plt.ylabel("Y")
 plt.legend()
 plt.grid()
 
-# --- 2. AŞAMA: MULTIPLE RUNS + ORTALAMA MSD ---
+
 msd_list = []
 
 for r in range(runs):
@@ -46,7 +46,6 @@ avg_msd = np.mean(msd_list)
 print("Average Mean Squared Displacement over", runs, "runs:", avg_msd)
 
 plt.show()
-# --- 3. AŞAMA: MSD vs STEP (zaman analizi) ---
 
 msd_time = np.zeros(num_steps)
 
@@ -72,7 +71,7 @@ plt.ylabel("MSD")
 plt.title("MSD vs Time (Random Walk)")
 plt.grid()
 plt.show()
-# --- 4. AŞAMA: Farklı step sayıları için ortalama MSD karşılaştırması ---
+
 
 step_values = [100, 300, 500, 1000, 1500, 2000]
 avg_msd_values = []
